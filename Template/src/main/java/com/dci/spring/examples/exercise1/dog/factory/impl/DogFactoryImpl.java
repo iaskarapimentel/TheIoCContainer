@@ -8,7 +8,11 @@ import com.dci.spring.examples.exercise1.dog.impl.DogImpl;
 public class DogFactoryImpl implements DogFactory {
 
   @Override
-  public Dog create(Long id, String name, Breed breed) {
+  public Dog create(Long id,
+                    String name,
+                    Breed breed) {
     return new DogImpl(id, name, breed);
   }
 }
+
+//So far, so good - we now need to have a bean of this class in the application context.

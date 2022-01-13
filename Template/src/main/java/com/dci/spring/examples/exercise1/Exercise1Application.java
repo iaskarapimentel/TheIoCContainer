@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class Exercise1Application {
@@ -13,7 +14,9 @@ public class Exercise1Application {
     SpringApplication.run(Exercise1Application.class, args);
   }
 
-  public CommandLineRunner run(ApplicationContext appContext) {
+//  Beans are instance of a class managed by the Spring Container
+  @Bean
+  public CommandLineRunner walk(ApplicationContext appContext) {
     return args -> {
       System.out.println();
       System.out.println("============================");
